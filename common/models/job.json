@@ -1,0 +1,44 @@
+{
+  "name": "job",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "customerid": {
+      "type": "string",
+      "required": true
+    },
+    "partnerid": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "subcategory": {
+      "type": "string",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user":{
+      "type": "belongsTo",
+      "model": "serviceuser",
+      "foreignKey": "customerid"
+      },
+    "partner":{
+      "type": "belongsTo",
+      "model": "serviceuser",
+      "foreignKey": "partnerid"
+      }
+    },
+  "acls": [],
+  "methods": []
+}

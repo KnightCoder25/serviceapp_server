@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongoDb"
+  },
+  "AccessToken": {
+    "dataSource": "mongoDb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongoDb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongoDb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongoDb",
+    "public": false
+  },
+   "application": {
+    "dataSource": "mongoDb",
+    "public": true
+  },
+  "installation": {
+    "dataSource": "mongoDb",
+    "public": true
+  },
+  "push": {
+    "dataSource": "push",
+    "public": true
+  },
+  "notification": {
+    "dataSource": "mongoDb",
+    "public": true
+  },
+  "serviceuser": {
+    "dataSource": "mongoDb",
+    "public": true
+  },
+  "job": {
+    "dataSource": "mongoDb",
+    "public": true
+  }
+}

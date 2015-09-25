@@ -1,0 +1,35 @@
+{
+  "name": "serviceuser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "emailId": {
+      "type": "string",
+      "required": true
+    },
+    "photoUrl": {
+      "type": "string"
+    },
+    "isPartner": {
+      "type": "boolean",
+      "default": false
+    },
+    "skills":{
+      "type":"array"
+    },
+    "createdAt":{
+      "type":"date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
